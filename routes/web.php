@@ -22,9 +22,9 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     Route::get('login', [BackendController::class, 'login'])->name('login');
     Route::get('forgot-password', [BackendController::class, 'forgot_password'])->name('forgot_password');
 });
-//Route::get('/', function () {
-//    return view('layouts.app');
-//});
+Route::get('/', function () {
+   return view('welcome');
+});
 
 Auth::routes();
 

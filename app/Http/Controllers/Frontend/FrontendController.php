@@ -27,7 +27,7 @@ class FrontendController extends Controller
         return view('frontend.checkout');
     }
     public function login(){
-        return view('frontend.checkout');
+        return view('auth.login');
     }
 
 }

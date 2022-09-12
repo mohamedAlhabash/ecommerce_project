@@ -14,7 +14,7 @@ Route::prefix('/boutique')->name('boutique.')->group(function () {
     Route::get('/detail', [FrontendController::class, 'detail'])->name('detail');
     Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
     Route::get('/cart', [FrontendController::class, 'cart'])->name('cart');
-    Route::get('/login', [FrontendController::class, 'login'])->name('login');
+    // Route::get('/login', [FrontendController::class, 'login'])->name('login');
 });
 
 Route::prefix('/admin')->name('admin.')->group(function () {

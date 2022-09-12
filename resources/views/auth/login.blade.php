@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
         <div class="col-lg-6">
-          <h1 class="h2 text-uppercase mb-0">Login</h1>
+          <h1 class="h2 text-uppercase mb-0">{{__('login')}}</h1>
         </div>
         <div class="col-lg-6 text-lg-right">
 

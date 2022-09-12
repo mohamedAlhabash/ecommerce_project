@@ -28,6 +28,23 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+        /**
+     * Get the login username to be used by the controller.
+     *
+     * @return string
+     */
+    public function username()
+    {//override for this method to make login use to login by username not by email
+        return 'username';
+    }
+    public function redirectTo()
+    {
+        if(auth()->user()->roles()->first()->allowed_route != '')
+        {
+            return $redirectTo = auth()->user()->roles()->first()->allowed_route .'/index';
+        }
+    }
+
     /**
      * Create a new controller instance.
      *

@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
         <div class="col-lg-6">
-          <h1 class="h2 text-uppercase mb-0">Register</h1>
+          <h1 class="h2 text-uppercase mb-0">{{__('register')}}</h1>
         </div>
         <div class="col-lg-6 text-lg-right">
 
@@ -64,7 +64,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label class="text-small text-uppercase" for="password_confirmation">Password</label>
-                            <input class="form-control form-control-lg" name="password" type="password"  placeholder="Re Type Your Password">
+                            <input class="form-control form-control-lg" name="password_confirmation" type="password"  placeholder="Re Type Your Password">
                             @error('password_confirmation')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                     </div>

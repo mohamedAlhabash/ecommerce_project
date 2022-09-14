@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     public function index(){
+        //  dd(auth()->user()->first_name);
         return view('frontend.index');
     }
 
@@ -26,8 +27,11 @@ class FrontendController extends Controller
     public function checkout(){
         return view('frontend.checkout');
     }
-    public function login(){
-        return view('auth.login');
-    }
+    // public function register(){
+    //     return view('auth.register');
+    // }
+    // public function login(){
+    //     return view('auth.login');
+    // }
 
 }

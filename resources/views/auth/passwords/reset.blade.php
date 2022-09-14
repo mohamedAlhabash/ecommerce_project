@@ -40,7 +40,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label class="text-small text-uppercase" for="password_confirmation">Password</label>
-                                <input class="form-control form-control-lg" name="password" type="password"  placeholder="Re Type Your Password">
+                                <input class="form-control form-control-lg" name="password_confirmation" type="password"  placeholder="Re Type Your Password">
                                 @error('password_confirmation')<span class="text-danger">{{$message}}</span>@enderror
                             </div>
                         </div>

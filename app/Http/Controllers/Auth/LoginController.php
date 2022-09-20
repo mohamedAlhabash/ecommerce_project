@@ -39,9 +39,8 @@ class LoginController extends Controller
     }
     public function redirectTo()
     {
-        if(auth()->user()->roles()->first()->allowed_route != '')
-        {
-            return $redirectTo = auth()->user()->roles()->first()->allowed_route .'/index';
+        if(auth()->user()->roles()->first()->allowed_route != ''){
+            return $this->redirectTo = auth()->user()->roles()->first()->allowed_route . '/index';
         }
     }
 

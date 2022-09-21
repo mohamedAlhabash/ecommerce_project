@@ -26,6 +26,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
         Route::get('forgot-password', [BackendController::class, 'forgot_password'])->name('forgot_password');
     });
     Route::middleware(['roles', 'role:admin|supervisor'])->group(function () {
+        Route::get('', [BackendController::class, 'index'])->name('index_route');
         Route::get('index', [BackendController::class, 'index'])->name('index');
     });
 });

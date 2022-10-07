@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\Backend\BackendController;
+use App\Http\Controllers\Backend\ProductCategories;
+use App\Http\Controllers\Backend\ProductCategoriesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Frontend\FrontendController;
+use App\Models\ProductCategory;
 
 // Route::get('/boutique',[FrontendController::class,'index']);
 
@@ -28,6 +31,7 @@ Route::prefix('/admin')->name('admin.')->group(function () {
     Route::middleware(['roles', 'role:admin|supervisor'])->group(function () {
         Route::get('', [BackendController::class, 'index'])->name('index_route');
         Route::get('index', [BackendController::class, 'index'])->name('index');
+        Route::resource('product_categories',ProductCategoriesController::class);
     });
 });
 // Route::get('/', function () {
